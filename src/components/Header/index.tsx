@@ -4,7 +4,6 @@ import { MdShoppingBasket, MdSearch, MdArrowBack } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { searchProduct } from '../../store/modules/products/actions';
-import { CartState } from '../../store/modules/cart/types';
 import { ApplicationState } from '../../store';
 
 import {

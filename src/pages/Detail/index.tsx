@@ -53,6 +53,7 @@ const Detail: React.FC = () => {
   const handleAddProductToCart = useCallback(() => {
     if (!size) {
       setError(true);
+      return;
     }
 
     dispatch(addToCartRequest({ ...product, size, amount: 1 }));
