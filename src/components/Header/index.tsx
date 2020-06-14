@@ -21,9 +21,6 @@ import {
 const Header: React.FC = () => {
   const [toogled, setToogled] = useState(false);
   const dispatch = useDispatch();
-  const { products } = useSelector<ApplicationState, CartState>(
-    (state) => state.cart,
-  );
 
   const total = useSelector<ApplicationState, number>((state) =>
     state.cart.products.reduce((t, product) => {
