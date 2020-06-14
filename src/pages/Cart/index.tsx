@@ -87,13 +87,13 @@ const Cart: React.FC = () => {
               <td>
                 <img src={product.image} alt={product.name} />
               </td>
-              <td>
+              <td data-label="PRODUTO">
                 <strong>
                   {product.name} - {product.size}
                 </strong>
                 <span>{product.actual_price}</span>
               </td>
-              <td>
+              <td data-label="QTD">
                 <div>
                   <button type="button" onClick={() => decrement(product)}>
                     <MdRemoveCircleOutline size={20} color="#212529" />
@@ -104,10 +104,10 @@ const Cart: React.FC = () => {
                   </button>
                 </div>
               </td>
-              <td>
+              <td data-label="SUBTOTAL">
                 <strong>{product.subtotal}</strong>
               </td>
-              <td>
+              <td data-label="AÇÕES">
                 <button type="button" onClick={() => remove(product)}>
                   <MdDelete size={20} color="#212529" />
                 </button>

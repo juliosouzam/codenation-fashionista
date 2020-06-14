@@ -38,7 +38,53 @@ export const Container = styled.div`
 `;
 
 export const ProductTable = styled.table`
+  @media screen and (max-width: 800px) {
+    border: 0;
+
+    thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    tr {
+      border-bottom: 3px solid #999;
+      display: block;
+      margin-bottom: 0.625em;
+    }
+
+    td {
+      border-bottom: 1px solid #999;
+      display: block;
+      font-size: 0.8em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > img {
+        margin: 0 auto;
+      }
+    }
+
+    td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    td:last-child {
+      border-bottom: 0;
+    }
+  }
+
   width: 100%;
+  max-width: 1200px;
 
   thead th {
     color: #999;
