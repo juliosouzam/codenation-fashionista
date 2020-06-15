@@ -8,6 +8,7 @@ import { loadProductsRequest } from '../../store/modules/products/actions';
 
 import {
   Wrapper,
+  NoProductsFound,
   Container,
   Badge,
   Prices,
@@ -27,6 +28,9 @@ const Home: React.FC = () => {
 
   return (
     <Wrapper>
+      {filtered.length <= 0 && (
+        <NoProductsFound>Nenhum produto encontrado</NoProductsFound>
+      )}
       <Container>
         {filtered.map((product) => (
           <li key={product.id}>
