@@ -82,6 +82,10 @@ export const AddToCartButton = styled.button`
   font-size: 18px;
 
   box-shadow: 0 0.2rem 2rem 0 rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const Err = styled.p`

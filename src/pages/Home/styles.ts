@@ -8,6 +8,14 @@ export const Wrapper = styled.div`
   margin: 0 20px;
 `;
 
+export const NoProductsFound = styled.span`
+  font-size: 24px;
+  font-weight: bold;
+  color: #232529;
+  text-align: center;
+  margin: 0 auto;
+`;
+
 export const Container = styled.ul`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -40,6 +48,14 @@ export const Container = styled.ul`
       img {
         align-self: center;
         max-width: 250px;
+        transition: all 0.3s;
+        margin-bottom: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease 0s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
 
       > strong {
@@ -63,6 +79,7 @@ export const Badge = styled.span`
   border-bottom: 25px solid transparent;
   border-left: 25px solid #d92027;
   border-right: 25px solid #d92027;
+  z-index: 1;
 
   display: flex;
   justify-content: center;
