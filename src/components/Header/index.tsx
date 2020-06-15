@@ -43,7 +43,7 @@ const Header: React.FC = () => {
   );
 
   return (
-    <Wrapper>
+    <Wrapper data-testid="header">
       <Container toogled={toogled}>
         <Link to="/">Fashionista</Link>
 
@@ -76,7 +76,11 @@ const Header: React.FC = () => {
         </button>
 
         <SeachWrapper toogled={toogled}>
-          <input type="text" />
+          <input
+            type="text"
+            placeholder="Pesquisa"
+            onChange={handleSearchProducts}
+          />
           <button type="button">
             <MdSearch size={20} color="#999" />
           </button>
