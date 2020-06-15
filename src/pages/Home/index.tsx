@@ -39,7 +39,7 @@ const Home: React.FC = () => {
                 <span>{product.discount_percentage}</span>
               </Badge>
             )}
-            <Link to={`/details/${product.slug}`}>
+            <Link to={`/product/${product.slug}`}>
               <img
                 src={
                   product.image ||

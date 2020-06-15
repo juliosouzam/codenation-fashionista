@@ -83,7 +83,7 @@ const Cart: React.FC = () => {
         </thead>
         <tbody>
           {productData.map((product) => (
-            <tr>
+            <tr key={product.id}>
               <td>
                 <img src={product.image} alt={product.name} />
               </td>

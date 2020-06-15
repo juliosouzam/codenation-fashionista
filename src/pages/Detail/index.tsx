@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useRouteMatch } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 
 import {
   Container,
@@ -57,6 +58,7 @@ const Detail: React.FC = () => {
     }
 
     dispatch(addToCartRequest({ ...product, size, amount: 1 }));
+    toast.success('Produto adicionado ao carrinho');
   }, [size, dispatch, product]);
 
   if (loading) {
